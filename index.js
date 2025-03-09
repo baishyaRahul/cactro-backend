@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const { getUserData, userRepoData, createIssueInRepo } = require('./api.functions.js')
 const port = 3000;
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('GitHub API Integration')
